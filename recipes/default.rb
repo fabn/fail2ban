@@ -21,8 +21,8 @@ package "fail2ban" do
 end
 
 %w{ fail2ban jail }.each do |cfg|
-  template "/etc/fail2ban/#{cfg}.conf" do
-    source "#{cfg}.conf.erb"
+  template "/etc/fail2ban/#{cfg}.local" do
+    source "#{cfg}.local.erb"
     owner "root"
     group "root"
     mode 0644
